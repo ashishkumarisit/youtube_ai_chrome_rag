@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YouTube AI RAG Developed By Ashish</title>
+<link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+<header><b>YouTube AI RAG</b><span id="status">Ready</span></header>
+<section class="card"><small>Current video</small><div id="videoTitle">Detecting...</div><small id="videoId"></small></section>
+<div class="quick">
+<button data-q="Summarize this video in 5 bullet points.">Summarize</button>
+<button data-q="What are the key concepts discussed in this video?">Key concepts</button>
+<button data-q="What are the most important takeaways from this video?">Takeaways</button>
+</div>
+<textarea id="question" placeholder="Ask a question about this video..."></textarea>
+<button id="ask">Ask AI</button>
+<section class="card"><small>Answer</small><div id="answer">Ask a question to begin.</div></section>
+<section class="card"><small>Sources</small><div id="sources"></div></section>
+<script src="sidepanel.js"></script>
+</body>
+</html>

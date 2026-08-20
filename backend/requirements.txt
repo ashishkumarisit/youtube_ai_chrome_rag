@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+python-dotenv
+langchain
+langchain-core
+langchain-openai
+langchain-huggingface
+langchain-text-splitters
+langchain-community
+sentence-transformers
+faiss-cpu
+youtube-transcript-api
+qdrant-client
+azure-search-documents

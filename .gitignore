@@ -55,7 +55,413 @@ cover/
 *.mo
 *.pot
 
-# Django stuff:
+# Django stuff:# ============================================================================
+# YouTube AI RAG Backend - .gitignore
+# Comprehensive .gitignore to prevent committing sensitive/unnecessary files
+# ============================================================================
+
+# ============================================================================
+# Python & Virtual Environments
+# ============================================================================
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv
+.env/
+
+# Poetry
+poetry.lock
+
+# Pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# ============================================================================
+# Environment & Secrets
+# ============================================================================
+
+# Environment variables (NEVER commit these!)
+.env
+.env.local
+.env.*.local
+.env.development
+.env.staging
+.env.test
+.env.production
+.env.*.production
+
+# Secrets
+secrets/
+*.key
+*.pem
+*.jks
+id_rsa
+id_rsa.pub
+
+# ============================================================================
+# IDE & Editor Configuration
+# ============================================================================
+
+# VSCode
+.vscode/
+*.code-workspace
+launch.json
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+.vim/
+*.swp
+*.swo
+*~
+.netrwhist
+tags
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Atom
+.atom/
+
+# JetBrains
+.DS_Store
+
+# ============================================================================
+# OS-Specific Files
+# ============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+*.swp
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Windows
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+.directory
+
+# ============================================================================
+# Data & Vector Store
+# ============================================================================
+
+# FAISS vector store indices (large files)
+data/
+data/faiss/
+*.faiss
+*.pkl
+*.index
+
+# Qdrant database
+qdrant_storage/
+
+# Azure search
+azure_index/
+
+# Transcript cache
+transcripts/
+*.json
+cache/
+
+# ============================================================================
+# Logs & Temporary Files
+# ============================================================================
+
+# Application logs
+logs/
+log/
+*.log
+*.log.*
+nohup.out
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+.tmp/
+
+# ============================================================================
+# Database & Cache
+# ============================================================================
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# Redis dump
+dump.rdb
+*.rdb
+
+# MongoDB
+.mongodb/
+
+# ============================================================================
+# Docker & Containers
+# ============================================================================
+
+# Docker build cache (optional)
+.docker/
+.dockerignore
+
+# Docker Compose overrides (local)
+docker-compose.override.yml
+docker-compose.local.yml
+
+# ============================================================================
+# Jupyter & Notebooks
+# ============================================================================
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IPython
+.ipython/
+profile_default/
+ipython_config.py
+
+# ============================================================================
+# Testing & Coverage
+# ============================================================================
+
+# pytest
+.pytest_cache/
+.pytest_tmp/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# nose
+.nox/
+.nosetests.cfg
+
+# tox
+.tox/
+.tox.ini
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+
+# ============================================================================
+# Build & Distribution
+# ============================================================================
+
+# Build directories
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Wheels
+wheels/
+*.whl
+
+# ============================================================================
+# CI/CD
+# ============================================================================
+
+# GitHub Actions
+.github/workflows/.secrets/
+
+# GitLab CI
+.gitlab-ci.yml.bak
+
+# Jenkins
+.jenkins/
+
+# Travis CI
+.travis.yml.bak
+
+# ============================================================================
+# Package Managers
+# ============================================================================
+
+# npm (if using Node.js frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.npm/
+
+# pip
+pip-log.txt
+pip-delete-this-directory.txt
+.pip/
+
+# ============================================================================
+# Documentation & Builds
+# ============================================================================
+
+# MkDocs
+site/
+docs/_build/
+
+# Sphinx
+docs/_build/
+docs/.doctrees/
+
+# API documentation
+.htmlcov/
+
+# ============================================================================
+# Miscellaneous
+# ============================================================================
+
+# Compiled files
+*.so
+.c
+*.o
+*.a
+*.lib
+
+# Language server protocol
+.vscode-server/
+
+# Remote development
+.devcontainer/
+
+# Vagrant
+.vagrant/
+Vagrantfile
+
+# Ansible
+*.retry
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraformrc
+terraform.tfvars
+
+# ============================================================================
+# Project-Specific
+# ============================================================================
+
+# Model files (large)
+*.model
+*.bin
+*.pt
+*.ckpt
+*.pth
+
+# Video files (if downloaded)
+*.mp4
+*.mkv
+*.webm
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Experimental branches/features
+experimental/
+test_data/
+test_models/
+
+# ============================================================================
+# IMPORTANT: DO NOT IGNORE THESE
+# ============================================================================
+# These files should be committed:
+
+# DO COMMIT:
+# ✓ requirements.txt (production dependencies)
+# ✓ requirements-prod.txt (production dependencies)
+# ✓ Dockerfile & Dockerfile.prod
+# ✓ docker-compose.yml
+# ✓ .env.example (example without secrets!)
+# ✓ README.md
+# ✓ All source code
+# ✓ Configuration files (non-secret)
+# ✓ GitHub workflows (without secrets)
+# ✓ Documentation
+
+# DO NOT COMMIT:
+# ✗ .env (actual environment variables with secrets)
+# ✗ .env.production (production secrets)
+# ✗ API keys
+# ✗ Private keys
+# ✗ Database files
+# ✗ Large data files
+# ✗ logs/
+# ✗ __pycache__/
+# ✗ venv/
+
+# ============================================================================
+# SECTION: Override .gitignore for important files
+# ============================================================================
+
+# Force-include important files (prefix with !)
+# Example: if you need to commit something that's normally ignored
+# !important_file.txt
+# !important_directory/
+
+# Force include configuration examples
+!.env.example
+!.env.production.example
+!docker-compose.yml
+!requirements.txt
+!requirements-prod.txt
+
 *.log
 local_settings.py
 db.sqlite3
@@ -216,3 +622,5 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+backend/.env.example
+.gitignore
